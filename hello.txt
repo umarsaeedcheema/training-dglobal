@@ -3,3 +3,5 @@ DGlobal
 Testing to see if Github Actions worked or not. 
 
 Testing on branch test-1, checking if it builds on all OS.
+
+Not running on all OS, now trying on Ubuntu only again. 
