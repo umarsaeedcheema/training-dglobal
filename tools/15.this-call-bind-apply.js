@@ -1,8 +1,8 @@
-// this- it refers to the iobject, by default it refers to the global object
+// this- it refers to the object, by default it refers to the global object
 
 // to attach some properties to the object these 3 methods are used
 
-// call method 
+// call method - uses referece and paramters (separately)
 // const address = { city: 'Lahore', area : 'Gulberg'}
 // function print(name){
 //     console.log('Name: '+ name, this.city, this.area)
@@ -11,7 +11,7 @@
 // print.call(address,'Umar' )
 //give the object that you want to add things as first argument
 
-// apply method 
+// apply method - uses parameters and an array
 // its lets you pass the arguments as an array 
 
 // const address = { city: 'Lahore', area : 'Gulberg'}
@@ -23,7 +23,7 @@
 
 // difference is that apply can take an array
 
-// bind() method
+// bind() method - uses a reference only
 // this returns a new function with the value bound to it
 
 

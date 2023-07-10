@@ -1,40 +1,52 @@
+// Functions dont have memory, they get deleted after they run, their local context is removed.
+// Is there a way that we can give memory to functions ? 
+
+
 // a function inside a function 
 // it returns a function 
 
 
-let val = 8
-
-function multiply(){
-    function multipleByTwo(x){
-        return x*2
+function outerFunction(outerParam) {
+    function innerFunction(innerParam) {
+      console.log(`Outer parameter: ${outerParam}`);
+      console.log(`Inner parameter: ${innerParam}`);
     }
-    return multipleByTwo
-}
-
-let mult = multiply()
-let val_16 = mult(val)
-let val_32 = mult(val)
-console.log(val_16,val_32)
-
-// this is an example of function inside a function 
-
-// this is not an example of closure, it creates a local execution context which is temporary
+    return innerFunction;
+  }
+  
+  const closureExample = outerFunction('Hello');
+  closureExample('World');
+//   when outerfunc is called it returns innerfunc without executing it.
 
 // closure
 // closure is when a function can access variables outside of it.
 
-function createCounter(){
-    let counter = 0
-    const myFunction = function (){
-        counter = counter + 1
-        return counter
-    }
-    return myFunction
+// function createCounter(){
+//     let counter = 0
+//     const myFunction = function (){
+//         counter = counter + 1
+//         return counter
+//     }
+//     return myFunction
+// }
+
+// const increment = createCounter()
+// const c1 = increment()
+// const c2 = increment()
+// const c3 = increment()
+
+// console.log('counters', c1,c2,c3)
+
+
+// closures
+
+function wrapValue(n){
+    let local = n
+    return () => local
 }
 
-const increment = createCounter()
-const c1 = increment()
-const c2 = increment()
-const c3 = increment()
+let wrap1 = wrapValue(1)
+let wrap2 = wrapValue(2)
+console.log(wrap1())
+console.log(wrap2())
 
-console.log('counters', c1,c2,c3)

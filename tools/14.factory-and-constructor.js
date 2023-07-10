@@ -1,4 +1,4 @@
-// factory fundtions are used to reduce code and resue code.
+// factory functions are used to reduce code and resue code.
 // factory and constructor are both ways to declare objects
 function createCircle(radius){
     return {
