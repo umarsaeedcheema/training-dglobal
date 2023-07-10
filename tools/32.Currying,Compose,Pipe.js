@@ -1,5 +1,6 @@
 // // Currying
-// Lazy compilation , Functional Programming 
+// Lazy compilation, Function is invoked only when it is required , Functional Programming 
+
 
 // function add(x,y){
 //     return x+y
