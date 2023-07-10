@@ -26,3 +26,5 @@ const cat = new Cat();
 animal.makeSound(); // Output: "Animal makes a sound"
 dog.makeSound();    // Output: "Dog barks"
 cat.makeSound();    // Output: "Cat meows"
+
+
